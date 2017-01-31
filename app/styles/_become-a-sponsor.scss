@@ -1,0 +1,591 @@
+/* Become a sponsor
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.become-a-xsponsor {
+	.limited-quantities {
+		color: $beige;
+	}
+	section.page-intro {
+		p {
+			@media screen and (min-width: $medium) {
+				padding-right: 3em;
+			}
+			&.call-to-action {
+				display: inline-block;
+			}
+		}
+		span {
+			margin-left: 0;
+			font-size: $font-xsmall;
+			@media screen and (min-width: $small-medium){
+				font-size: $font-xsmall;
+				margin-left: .65em;
+			}
+		}
+	}
+	.xsponsor-packages {
+		& > div.row {
+			padding-left: .5em;
+			padding-right: .5em;
+			@media screen and (min-width: $small) {
+				padding-left: 0em;
+				padding-right: 0em;
+			}
+		}
+		margin-top: 4.5em;
+		th.comparison-header {
+			font-size: $font-xxsmall;
+			text-align: left;
+			text-transform: uppercase;
+			font-weight: normal;
+			color: $beige;
+			letter-spacing: .075em;
+			margin-bottom: 1em;
+			@media screen and (min-width: $small) {
+				margin-bottom: 0;
+				padding-right: 1em;
+				padding-left: 1em;
+				text-align: left;
+				text-transform: none;
+				letter-spacing: $tight-tracking;
+				font-weight: bold;
+				color: $black;
+			}
+			@media screen and (min-width: $small-medium) {
+				padding-right: 1em;
+				padding-left: 1em;
+			}
+			@media screen and (min-width: $medium-large) {
+				font-size: $font-medium;
+				padding-top: .6em;
+			}
+		}
+		table {
+			margin-top: 0em;
+			display: block;
+			width: 100%;
+			@media screen and (min-width: $small) {
+				display: table;
+				margin-top: 0em;
+			}
+			thead {
+				display: block;
+				background: none;
+				margin-bottom: 3.5em;
+				@media screen and (min-width: $small) {
+					display: table-header-group;
+					border-bottom: .0625em solid $hairline;
+					margin-bottom: 0em;
+				}
+				&.fixed {
+					position: relative;
+					display: block;
+					height: auto;
+					box-shadow: none;
+					@media screen and (min-width: $small) {
+						position: fixed;
+						height: auto;
+						display: table-row;
+						padding-left: 0.9375em;
+						padding-right: 0.9375em;
+						background: $bg;
+						@include box-shadow(0px, 1px, 5px, rgba(0,0,0,.1));
+					}
+
+					.packages {
+						display: table;
+						width: 100%;
+						max-width: 58.125em; // 60em - (.9375*2)
+						margin: 0 auto;
+					}
+					& + tbody {
+						display: block;
+						padding-top: 3.85em; // To offset .fixed
+					}
+				}
+				th {
+					border-left: .0625em solid $hairline;
+					&:first-child {
+						border-left: none;
+					}
+				}
+			}
+			tbody {
+				// display: block;
+				td {
+					&:before {
+						font-size: $font-xxxsmall;
+						margin-bottom: .25em;
+						display: block;
+					}
+					&:nth-of-type(1) {
+						&:before {
+							content: 'Bronze';
+							@media screen and (min-width: $small) {
+								display: none;
+							}
+						}
+					}
+					&:nth-of-type(2) {
+						&:before {
+							content: 'Silver';
+
+							@media screen and (min-width: $small) {
+								display: none;
+							}
+						}
+					}
+					&:nth-of-type(3) {
+						&:before {
+							content: 'Gold';
+							@media screen and (min-width: $small) {
+								display: none;
+							}
+						}
+					}
+					&:nth-of-type(4) {
+						&:before {
+							content: 'Diamond';
+							@media screen and (min-width: $small) {
+								display: none;
+							}
+						}
+					}
+					&.yes:after, &.no:after {
+						margin: 0;
+						content: '';
+						display: block;
+						background-repeat: no-repeat;
+						background-position: center center;
+						@media screen and (min-width: $small) {
+							margin: 0 auto;
+						}
+					}
+					&.yes {
+						&:after {
+							width: 1em;
+							height: 1em;
+							@include at2x('../images/sponsor-checkmark', png, 100%);
+							margin-top: .3em;
+							@media screen and (min-width: $small) {
+								margin-top: 0;
+							}
+							@media screen and (min-width: $small-medium) {
+								width: 1.5em;
+								height: 1.5em;
+							}
+						}
+					}
+					&.no {
+						&:after {
+							width: .5em;
+							height: .75em;
+							margin-top: .4em;
+							@include at2x('../images/sponsor-nomark', png, 100%);
+							@media screen and (min-width: $small) {
+								margin-top: 0;
+							}
+							@media screen and (min-width: $small-medium) {
+								width: .875em;
+								height: .875em;
+							}
+						}
+					}
+				}
+			}
+			tr {
+				display: block;
+				text-align: left;
+				border-top: none;
+				margin-bottom: 1.5em;
+				overflow: hidden;
+				@media screen and (min-width: $small) {
+					text-align: center;
+					display: table-row;
+					margin-bottom: 0;
+					border-top: .0625em solid $hairline;
+				}
+				&:first-child {
+					border-top: none;
+				}
+				&:nth-of-type(odd){
+					@media screen and (min-width: $small) {
+						background: $darkerbg;
+					}
+				}
+				&.packages {
+					background: none;
+					@media screen and (min-width: $small) {
+						display: table-row;
+					}
+				}
+				th {
+					position: relative;
+					padding: 0 0;
+					vertical-align: middle;
+					width: 100%;
+					display: block;
+					@media screen and (min-width: $small) {
+						width: 15.5%;
+						padding: 1em 0;
+						display: table-cell;
+					}
+					&:first-child {
+						width: 100%;
+						@media screen and (min-width: $small) {
+							width: 38%;
+						}
+					}
+					&.package {
+						font-weight: bold;
+						letter-spacing: $tight-tracking;
+						font-size: $font-medium;
+						line-height: 1.6em;
+						width: 100%;
+						display: inline-block;
+						border: none;
+						text-align: left;
+						@media screen and (min-width: $small) {
+							display: table-cell;
+							// border-left: .0625em solid $hairline;
+							width: 15.5%;
+							font-size: $font-xxsmall;
+							text-align: center;
+							padding: 1em 0 2.5em;
+							color: $beige;
+							letter-spacing: 0.05em;
+							font-weight: normal;
+							text-transform: uppercase;
+							border-bottom: .25em solid;
+							&:nth-child(2) {
+								border-bottom-color: $bronze;
+							}
+							&:nth-child(3) {
+								border-bottom-color: $silver;
+							}
+							&:nth-child(4) {
+								border-bottom-color: $gold;
+							}
+							&:nth-child(5) {
+								border-bottom-color: $diamond;
+							}
+						}
+						@media screen and (min-width: $medium) {
+							padding: 1em 0 2em;
+						}
+						@media screen and (min-width: $medium-large) {
+							padding: 1em 0 2.5em;
+						}
+						@media screen and (min-width: $small-medium) {
+							font-size: $font-xxsmall;
+						}
+						@media screen and (min-width: $medium-large) {
+							font-size: $font-xxsmall;
+						}
+
+						span {
+							background: none;
+							font-weight: bold;
+							letter-spacing: $tight-tracking;
+							margin-left: .5em;
+							font-size: .5em;
+							width: 100%;
+							height: auto;
+							line-height: 1.1em;
+							display: inline-block;
+							position: absolute;
+							top: .5em;
+							text-transform: none;
+							@media screen and (min-width: $small) {
+								top: 3.5em;
+								display: block;
+								font-size: .75em;
+								margin-left: 0;
+							}
+							@media screen and (min-width: $medium-large) {
+								top: 3.6em;
+							}
+							br {
+								display: inline-block;
+								@media screen and (min-width: $small) {
+									display: none;
+								}
+							}
+
+							&.sold-out {
+								color: $pink;
+								@media screen and (min-width: $small) {
+									color: $black;
+								}
+							}
+						}
+					}
+					&.benefit {
+						text-align: left;
+						font-weight: bold;
+						color: $black;
+						font-size: $font-xsmall;
+						letter-spacing: $tight-tracking;
+						line-height: 1.3em;
+						margin-bottom: 1em;
+						@media screen and (min-width: $small) {
+							text-align: center;
+							line-height: 1.4em;
+							font-size: $font-xxsmall;
+							text-align: left;
+							color: $beige;
+							font-weight: normal;
+							padding-right: 1em;
+							padding-left: 1em;
+							margin-bottom: 0;
+							letter-spacing: 0em;
+						}
+						@media screen and (min-width: $small-medium) {
+							font-size: $font-xsmall;
+							padding-right: 1.4em;
+							padding-left: 1.4em;
+						}
+						@media screen and (min-width: $large) {
+							padding-right: 4.5em;
+							padding-left: 1.4em;
+						}
+					}
+					div {
+						span {
+							display: inline-block;
+							line-height: 1em;
+							font-size: .5em;
+							margin-left: .25em;
+							font-weight: bold;
+							letter-spacing: $tight-tracking;
+							@media screen and (min-width: $medium) {
+								font-size: .685714286em;
+							}
+							&:first-child {
+								margin-left: 0;
+							}
+							&.paid-addon {
+								color: $green;
+							}
+
+							&.sold-out {
+								color: $pink;
+								@media screen and (min-width: $small) {
+									color: $black;
+								}
+							}
+						}
+					}
+
+				}
+				td {
+					display: block;
+					padding: 0 0 1em;
+					vertical-align: middle;
+					color: $beige;
+					width: 25%;
+					float: left;
+					@media screen and (min-width: $small) {
+						padding: 1.2em 0;
+						display: table-cell;
+						width: 15.5%;
+						float: none;
+						border-left: .0625em solid $hairline;
+					}
+				}
+				&.cost {
+					border-top: .0625em solid $hairline;
+					border-bottom: .0625em solid $hairline;
+					padding-top: 2em;
+					padding-bottom: 1.2em;
+					@media screen and (min-width: $small) {
+						padding: inherit;
+						border-top: inherit;
+						border-bottom: none;
+					}
+					.limited-quantities {
+						display: block;
+						margin: 0 auto;
+						background: none;
+						font-size: .5em;
+						width: 100%;
+						height: auto;
+						margin-top: .5em;
+						@media screen and (min-width: $small) {
+							display: none;
+						}
+					}
+					td {
+						font-weight: bold;
+						color: $black;
+						font-size: $font-medium;
+						letter-spacing: $tight-tracking;
+						width: 50%;
+						@media screen and (min-width: $small) {
+							font-size: $font-xxsmall;
+							width: inherit;
+						}
+						@media screen and (min-width: $medium) {
+							font-size: $font-small;
+						}
+						&:before {
+							font-weight: normal;
+							color: $beige;
+						}
+					}
+				}
+			}
+			tfoot.fine-print {
+				tr {
+					background: none;
+					td {
+						padding-top: 1em;
+						border-left: none;
+						font-size: $font-xxsmall;
+						text-align: left;
+						line-height: 1.23em;
+						width: 100%;
+						@media screen and (min-width: $small) {
+							text-align: right;
+							padding-top: 2em;
+						}
+						@media screen and (min-width: $small-medium) {
+							width: 25%;
+							padding-top: 3em;
+						}
+						@media screen and (min-width: $medium) {
+
+						}
+						div {
+							float: none;
+							margin: .5em auto 0;
+							text-align: center;
+							@media screen and (min-width: $medium) {
+								float: right;
+							}
+						}
+						span {
+							width: auto;
+							background: none;
+							top: auto;
+							line-height: 1.23em;
+							@media screen and (min-width: $medium) {
+								margin-left: 1em;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	section.xsponsor-contact {
+		text-align: center;
+		margin-top: 2em;
+		@media screen and (min-width: $small) {
+			margin-top: 2em;
+		}
+		.columns {
+			padding-top: 2em;
+			@media screen and (min-width: $medium) {
+				padding-top: 2em;
+			}
+			h2 {
+				margin-bottom: 0em;
+				@media screen and (min-width: $medium) {
+					margin-bottom: 0;
+				}
+			}
+			a.button {
+				display: block;
+				font-size: $font-xxsmall;
+				margin-top: 1em;
+				@media screen and (min-width: $small) {
+					font-size: $font-xsmall;
+					display: inline-block;
+					padding-left: 2.5em;
+					padding-right: 2.5em;
+				}
+				@media screen and (min-width: $medium) {
+					font-size: $font-small;
+				}
+			}
+			a.call-to-action {
+				font-size: $font-xsmall;
+				margin-top: .5em;
+				@media screen and (min-width: $medium) {
+					margin-top: 1.5em;
+				}
+			}
+		}
+	}
+	section.xsponsor-a-la-carte {
+		div.banner {
+			padding-top: 5em;
+			padding-bottom: 2em;
+			border-top: 1px solid $hairline;
+			p {
+				margin-top: 0;
+			}
+			.call-to-action {
+				margin-top: .5em;
+				&:hover {
+					color: $darkblue;
+					&:after {
+					}
+				}
+			}
+			div.medium-centered {
+				float: none;
+				text-align: center;
+				@media screen and (min-width: $small) {
+					text-align: left;
+				}
+			}
+			div.image {
+				display: block;
+				height: 8em;
+				@include at2x('../images/a-la-carte-callout', png, contain);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: top center;
+				width: 100%;
+				@media screen and (min-width: $small) {
+					width: 25%;
+					float: left;
+				}
+				@media screen and (min-width: $medium) {
+
+				}
+			}
+			div.text {
+				width: 100%;
+				padding-top: 1em;
+				@media screen and (min-width: $small) {
+					float: left;
+					width: 75%;
+					padding-left: 1.5em;
+					margin-top: 0;
+					padding-top: 0em;
+				}
+				@media screen and (min-width: $medium-large) {
+					padding-top: 1em;
+					padding-left: 2em;
+				}
+				h3 {
+					color: $black;
+					@media screen and (min-width: $small) {
+						font-size: $font-small;
+					}
+					@media screen and (min-width: $medium) {
+						font-size: $font-medium;
+					}
+				}
+				.call-to-action {
+					font-size: $font-xsmall;
+					@media screen and (min-width: $medium) {
+						font-size: $font-small;
+					}
+				}
+			}
+		}
+	}
+}

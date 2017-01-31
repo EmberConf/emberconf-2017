@@ -1,0 +1,101 @@
+div.register {
+  .xsponsors-footer {
+		display: none;
+	}
+  .previous-xsponsors {
+		display: none;
+	}
+  section.page-intro {
+    @media screen and (min-width: $medium) {
+      padding-bottom: 0em;
+    }
+    div.hairline-bottom {
+      border-bottom: 1px solid $hairline;
+      padding-bottom: 5em;
+      @media screen and (min-width: $medium) {
+        padding-bottom: 0em;
+        border: none;
+      }
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      &.call-to-action {
+        text-align: center;
+        @media screen and (min-width: $medium) {
+          display: none;
+        }
+      }
+    }
+  }
+  section.tickets {
+    display: none;
+    @media screen and (min-width: $medium) {
+      display: block;
+    }
+    p.eventbrite-prep {
+      text-align: center;
+      margin-top: 3em;
+      max-width: $medium;
+      margin: 0 auto;
+    }
+  }
+section.faq-callout {
+  text-align: center;
+  padding-bottom: 7em;
+  margin-top: 4em;
+  padding-top: 3em;
+    p {
+      width: 50%;
+      float: left;
+    }
+  .hairline-top {
+    padding-top: 3em;
+    border-top: 1px solid $hairline;
+  }
+}
+
+  /* Leah's Code */
+  .accordion-content {
+    ul {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+      list-style: disc;
+      padding-left: 1.5em;
+      li {
+        margin-bottom: 1em;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .faq {
+    :last-child {
+      margin-bottom: 0;
+    }
+    .toggled-content {
+      padding-bottom: 1em;
+    }
+  }
+}
+// Eventbrite Styles
+.ticket_table_head {
+  td {
+    &:nth-child(2){
+      background-color: blue;
+    }
+  }
+}
+
+#TicketReg {
+  tbody {
+    tr {
+      &:nth-of-type(2) {
+        background-color: red;
+      }
+    }
+  }
+}

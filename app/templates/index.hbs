@@ -1,0 +1,131 @@
+<div class="home">
+  {{ partial "header" }}
+  <section class="join-us">
+    <div class="collage-top"></div>
+    <div class="collage-bottom"></div>
+    <h1>We're doing it <br>again in 2017.</h1>
+  </section>
+
+
+  <section class="intro-statement">
+    <div class="row">
+      <div class="small-12 columns">
+        <p>EmberConf is three days of trainings, sessions, activities and good times with the Ember Core Team and community members from around the world.</p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Tickets go on sale soon. -->
+
+
+<!-- <a name="register"></a>
+<section class="coming-soon">
+  <div class="row">
+    <div class="small-12 medium-10 medium-centered large-8 large-centered columns">
+      <h2>Tickets go on sale soon.</h2>
+      <p>Sign up to get notified when tickets go on sale.</p>
+      <div id="mc_embed_signup" class="mailchimp-signup">
+        <form action="//emberconf.us5.list-manage.com/subscribe/post?u=38b10ba9a19dbc7dcef880a53&amp;id=433ae4a18f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group">
+              <div class="row medium-collapse">
+                <div class="small-12 medium-9 columns">
+                  <input type="email" value="" placeholder="Enter your email" name="EMAIL" class="required email" id="mce-EMAIL">
+                </div>
+                <div class="small-12 medium-3 columns">
+                  <input type="submit" value="Get notified" name="subscribe" id="mc-embedded-subscribe" class="button postfix">
+                </div>
+              </div>
+            </div>
+            <div id="mce-responses" class="row">
+              <div class="small-12 columns">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_38b10ba9a19dbc7dcef880a53_433ae4a18f" tabindex="-1" value=""></div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    </div>
+  </div>
+</section> -->
+
+<!-- Give a talk -->
+
+<!-- <section class="give-a-talk">
+  <div class="row">
+    <div class="small-12 large-12 columns">
+      <h2>Give a talk at EmberConf</h2>
+      <p>Join the best and the brightest on our stage. We welcome those who are new, community veterans, and everyone in between.</p>
+      <p class="call-to-action"><a href="become-a-speaker.html">Learn about our Call for Papers</a></p>
+    </div>
+  </div>
+</section> -->
+
+{{ if settings.show_speakers }}
+  <!-- Featured speakers -->
+
+  <section class="featured-speakers">
+    <div class="row">
+      <div class="small-12 columns">
+        <h2>See talks and sessions by...</h2>
+        <ul class="row collapse">
+          {{#each data.speakers as |speaker| }}
+          {{#if speaker.featured }}
+          <li class="small-6 medium-3 columns">
+            <a href="/speakers.html#{{ speaker.anchor }}">
+              <div>
+                {{ image_tag "images/speakers/#{speaker.image}" }}
+              </div>
+            </a>
+            <p><a href="/speakers.html#{{ speaker.anchor }}">{{ speaker.name }}</a></p>
+          </li>
+          {{/if }}
+          {{/each }}
+        </ul>
+        <p class="call-to-action"><a href="speakers.html">See all speakers</a></p>
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+
+{{ if settings.show_schedule }}
+  <!-- Bonus day callout for when schedule launches -->
+
+  <section class="bonus-day">
+    <div class="row">
+      <div class="small-12 medium-5 medium-push-7 large-6 large-push-6 columns illustration">
+        <div></div>
+      </div>
+      <div class="small-12 medium-7 medium-pull-5 large-6 large-pull-6 columns text">
+        <h2>Get an extra day of content &amp; activities.</h2>
+        <p>We've organized discounted training sessions, an afternoon BonusConf and some local activities for Monday, March 27, the day before EmberConf.</p>
+        <p class="call-to-action"><a href="schedule.html">See the schedule</a></p>
+      </div>
+    </div>
+  </section>
+{{ end }}
+
+
+<!-- Other callouts -->
+
+<section class="get-involved">
+  <div class="row">
+    {{#each data.homepage_callouts as |callout| }}
+    <div class="medium-4 columns">
+      <a class="image" href="{{ callout.href }}" {{ target }}><img src="images/{{ callout.jpg }}.jpg" alt="{{ callout.image_description }}"/></a>
+      <h3>{{ callout.headline }}</h3>
+      <p class="description">{{ callout.description }}</p>
+      <p class="link call-to-action"><a href="{{ callout.href }}" {{ target }}>{{ callout.call_to_action }}</a></p>
+    </div>
+    {{/each }}
+  </div>
+</section>
+
+
+{{ partial "footer" }}
+</div>

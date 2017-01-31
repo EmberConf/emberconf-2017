@@ -1,0 +1,249 @@
+/* About
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.about {
+	.what-to-expect {
+		margin-top: 4.5em;
+		ul {
+			line-height: 1.428571429em;
+			color: $beige;
+			font-size: $font-small;
+			@media screen and (min-width: $medium) {
+				font-size: $font-medium;
+			}
+			li {
+				margin-top: 1.5rem;
+				padding-left: 2.6em;
+				width: 100%;
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				@media screen and (min-width: $medium) {
+					width: 50%;
+					margin-top: 1.4em;
+					padding-right: 1em;
+					padding-left: 2em;
+				}
+				@media screen and (min-width: $large) {
+					width: 33%;
+					padding-left: 2.5em;
+					padding-right: 1.5em;
+					font-size: $font-xsmall;
+					line-height: 1.3em;
+				}
+				&:before{
+					content: '';
+					display: block;
+					position: absolute;
+					left: -.7em;
+					height: 2.9375em; /* 47px/21px */
+					width: 2.9375em;
+					top: -.5em;
+					background-repeat: no-repeat;
+					background-position: top center;
+					@include transform(scale(.6));
+					@media screen and (min-width: $medium) {
+						@include transform(scale(.8));
+						top: -.3em;
+						left: -1em;
+					}
+					@media screen and (min-width: $large) {
+						@include transform(scale(1));
+						top: .1em;
+						left: -.75em;
+					}
+				}
+				&.expect-activities {
+					&:before {
+						@include at2x('../images/expect-activities', png, 2.9375em, 2.3125em);
+						@media screen and (min-width: $medium) {
+							background-size: 2.238095238em, 1.761904762em;
+							// These are divided by 21px.
+						}
+					}
+				}
+				&.expect-talks {
+					&:before {
+						@include at2x('../images/expect-talks', png, 2.4375em, 2.4375em);
+						@media screen and (min-width: $medium) {
+							background-size: 1.857142857em, 1.857142857em;
+							// These are divided by 21px.
+						}
+					}
+				}
+				&.expect-lunch {
+					&:before {
+						@include at2x('../images/expect-lunch', png, 2.6875em, 2.5625em);
+						@media screen and (min-width: $medium) {
+							background-size: 2.047619048em, 1.952380952em;
+							// These are divided by 21px.
+						}
+					}
+				}
+				&.expect-friends {
+					&:before {
+						@include at2x('../images/expect-friends', png, 1.75em, 3em);
+						@media screen and (min-width: $medium) {
+							background-size: 1.333333333em, 2.285714286em;
+							// These are divided by 21px.
+						}
+					}
+				}
+				&.expect-swag {
+					&:before {
+						@include at2x('../images/expect-swag', png, 2.4375em, 2.375em);
+						@media screen and (min-width: $medium) {
+							background-size: 1.761904762em, 1.80952381em;
+							// These are divided by 21px.
+						}
+					}
+				}
+				&.expect-parties {
+					&:before {
+						@include at2x('../images/expect-parties', png, 2.1875em, 2.3125em);
+						@media screen and (min-width: $medium) {
+							background-size: 1.666666667em, 1.952380952em;
+							// These are divided by 21px.
+						}
+					}
+				}
+			}
+		}
+	}
+	section {
+		&.pullquote.full-bleed {
+			margin-top: 6em;
+			background-color: $black;
+			&:before {
+				@include at2x('../images/family-united', jpg, cover);
+				opacity: .4;
+				@media screen and (min-width: $medium){
+					opacity: .6;
+				}
+			}
+			blockquote {
+				p {
+					font-weight: 700;
+					color: #fff;
+					font-size: $font-medium;
+					line-height: 1.125em;
+					letter-spacing: $tight-tracking;
+					@media screen and (min-width: $medium){
+						font-size: $font-large;
+					}
+					@media screen and (min-width: $large) {
+						font-size: $font-xlarge;
+					}
+				}
+				cite {
+					color: #fff;
+					display: block;
+					margin-top: 1em;
+					@media screen and (min-width: $medium) {
+						margin-top: 4em;
+					}
+				}
+				a {
+					color: #fff;
+					font-size: $font-xxxsmall;
+					line-height: 2.5em;
+					@media screen and (min-width: $medium) {
+						font-size: 1em;
+						line-height: 2em;
+					}
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+	section.meet-leah {
+		margin-top: 1.5em;
+		@media screen and (min-width: $medium){
+			margin-top: 5em;
+		}
+		.bio-card {
+			margin-bottom: 2em;
+			@media screen and (min-width: $medium){
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	section.staff {
+		h2 {
+			text-align: center;
+		}
+		ul {
+			text-align: center;
+			li.bio-card {
+				display: inline-block;
+				vertical-align: top;
+				width: 100%;
+				padding: 0 .5em 0 0;
+				margin-top: 3em;
+				@media screen and (min-width: $small){
+					width: 50%;
+				}
+				@media screen and (min-width: $medium){
+					width: 33%;
+				}
+				@media screen and (min-width: $large) {
+					width: 25%;
+				}
+
+			}
+		}
+	}
+	section.code-of-conduct {
+		div.row {
+			div {
+				div {
+					text-align: center;
+					@include at2x('../images/no-jerks-badge', png, 15em, 10.9375em);
+					background-repeat: no-repeat;
+					background-position: center top;
+					// background-size: 9.375em 6.8359375em;
+					padding-top: 14em;
+					padding-bottom: 3em;
+					@media screen and (min-width: $medium) {
+						padding: 1.5em 40% 2em 0%;
+						background-size: 40%;
+						text-align: left;
+						background-position: center right;
+						text-align: left;
+						background-size: auto 100%;
+					}
+					@media screen and (min-width: $medium-large) {
+						padding: 1.5em 0 2em 50%;
+						background-size: auto 100%;
+						background-position: 7% center;
+					}
+					@media screen and (min-width: $large) {
+						padding-left: 55%;
+						text-align: left;
+						background-size: auto 100%;
+						background-position: 17% center;
+					}
+					h2 {
+						&:first-child {
+							font-size: $font-medium;
+							font-weight: 400;
+							color: $beige;
+							margin-bottom: 1em;
+						}
+					}
+				}
+			}
+		}
+	}
+	section.faq-callout {
+		text-align: center;
+		margin-top: 4em;
+		padding-top: 3em;
+		.hairline-top {
+			padding-top: 3em;
+			border-top: 1px solid $hairline;
+		}
+	}
+}

@@ -1,0 +1,22 @@
+<section class="previous-xsponsors">
+  <div class="row">
+    <div class="large-12 columns">
+      <h3>Thanks to our past sponsors.</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12">
+      <ul class="logo-wall">
+        {{#each previousSponsors as |level sponsors|}}
+          {{#each sponsors as |sponsor|}}
+            <li>
+              <div>
+                <img src="images/sponsors/{{sponsor.image}}" alt="{{sponsor.name}}" title="{{sponsor.name}}" data-no-retina>
+              </div>
+            </li>
+          {{/each}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</section>

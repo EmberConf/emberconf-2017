@@ -1,0 +1,439 @@
+/* Home
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+section.join-us {
+
+	text-align: center;
+	position: relative;
+	margin-top: 1em;
+	height: 12em;
+	color: #fff;
+	background-color: $black;
+	margin-bottom: 2em;
+	overflow: hidden;
+	@media screen and (min-width: $small) {
+		height: 16em;
+		margin-bottom: 3em;
+		margin-top: 1em;
+	}
+	@media screen and (min-width: $medium) {
+		margin-top: 1em;
+		height: 26.25em;
+	}
+	@media screen and (min-width: $large) {
+		height: 34em;
+		margin-top: 0;
+		margin-bottom: 4.5em;
+	}
+	.collage-top, .collage-bottom {
+		background-repeat: repeat-x;
+		background-position: top left;
+		display: block;
+		left: 0;
+		height: 6em;
+		position: absolute;
+		background-size: auto 100%;
+		@media screen and (min-width: $small) {
+			height: 8em;
+		}
+		@media screen and (min-width: $medium) {
+			height: 13.125em;
+		}
+		@media screen and (min-width: $large) {
+			height: 17em;
+		}
+	}
+	.collage-top {
+		top:0;
+		right: -155.75em;
+		@include at2x('../images/collage-top', jpg, cover);
+		@include animation(collageTop 450s linear infinite);
+	}
+	.collage-bottom {
+		top: 6em; // Height of rows
+		right: -144.875em; // Width of image
+		@include at2x('../images/collage-bottom', jpg, cover);
+		@include animation(collageBottom 600s linear infinite);
+		@media screen and (min-width: $small) {
+			top: 8em;
+		}
+		@media screen and (min-width: $medium) {
+			top: 13.125em;
+		}
+		@media screen and (min-width: $large) {
+			top: 17em;
+		}
+	}
+	h1 {
+		top: 48%;
+		width: 100%;
+		position: absolute;
+		@include transform(translateY(-50%));
+		font-size: 2.25em;
+		line-height: .98em;
+		letter-spacing: -.055em;
+		padding: 0 2%;
+		@media screen and (min-width: $small-medium) {
+			font-size: 3.5em;
+		}
+		@media screen and (min-width: $medium) {
+			font-size: 4.375em;;
+			top: 48%;
+		}
+		@media screen and (min-width: $large) {
+			font-size: 6.25em;
+			line-height: 1.05em;
+		}
+
+	}
+}
+@include keyframes (collageTop) {
+	from {
+		@include transform(translatex(0));
+	}
+	to {
+		@include transform(translatex(-155.75em));
+	}
+}
+@include keyframes (collageBottom) {
+	from {
+		@include transform(translatex(0));
+	}
+	to {
+		@include transform(translatex(-144.875em));
+	}
+}
+
+
+section.intro-statement {
+	margin-top: 0em;
+	div.row {
+		div {
+			p {
+				color: $beige;
+				text-align: center;
+				@media screen and (min-width: $small) {
+					font-size: $font-medium;
+				}
+			}
+		}
+	}
+}
+
+section.coming-soon {
+	margin-top: 3em;
+	margin-bottom: -.75em;
+	@media screen and (min-width: $medium) {
+		margin-top: 4em;
+	}
+	div.row {
+		div {
+			text-align: center;
+			.mailchimp-signup {
+				margin-top: 1.25em;
+				form {
+					font-size: $font-xsmall;
+				}
+				.response {
+					font-size: $font-small;
+					line-height: 1.5em;
+					color: $beige;
+				}
+			}
+			#mc_embed_signup {
+				div.mce_inline_error {
+					color: $ember;
+					background: none;
+					padding: .75em 0 0;
+					margin: 0;
+				}
+			}
+			#mce-responses {
+				font-size: $font-small;
+				line-height: 1.5em;
+				color: $beige;
+				a {
+					text-decoration: underline;
+					&:hover {
+						color: $darkbeige;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+section.bonus-day {
+	background-color: $darkerbg;
+	padding-top: 4.5em;
+	margin-top: 6em;
+	padding-bottom: 4.5em;
+	div.row {
+		div.text {
+		}
+		div.illustration {
+			div {
+				width: 100%;
+				display: block;
+				margin: -5.5em auto 2.5em;
+				max-width: 22.0625em;
+				@media screen and (min-width: $medium) {
+					float: right;
+					margin-top: 0;
+					margin-bottom: 0;
+					position: relative;
+					top: -1.5em;
+				}
+				&:after {
+					content: '';
+					display: block;
+					width: 100%;
+					padding-bottom: 81.3031161%;
+					max-width: 22.0625em;
+					max-height: 17.9375em;
+					position: relative;
+					@include at2x('../images/bonus-day-illustration', png, 100%, auto);
+					background-repeat: no-repeat;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
+
+section.give-a-talk {
+	padding-bottom: 0;
+	background-color: $darkerbg;
+	margin-top: 6em;
+	div.row {
+		div {
+			padding-bottom: 14em;
+			padding-top: 5em;
+			padding-right: 0;
+			margin-top: -1.5em;
+			@include at2x('../images/talk-at-emberconf-speaker', png, auto, 35%);
+			background-position: center bottom;
+			background-repeat: no-repeat;
+			@media screen and (min-width: $xsmall) {
+				padding-bottom: 4em;
+				padding-right: 10%;
+				background-size: auto 35%;
+				background-position: right bottom;
+			}
+			@media screen and (min-width: $small) {
+				padding-right: 20%;
+				background-size: auto 50%;
+			}
+			@media screen and (min-width: $small-medium) {
+				padding-right: 40%;
+				padding-bottom: 6.5em;
+				padding-top: 6.5em;
+				background-position: right bottom;
+				background-size: auto 100%;
+			}
+			@media screen and (min-width: $medium) {
+				padding-right: 50%;
+			}
+			@media screen and (min-width: $medium-large) {
+				padding-right: 45%;
+				background-size: auto 100%;
+				padding-top: 7.5em;
+				padding-bottom: 7.5em;
+
+			}
+			@media screen and (min-width: $large) {
+				background-position: right 2em top;
+			}
+			p {
+				font-size: $font-small;
+				@media screen and (min-width: $medium) {
+					font-size: $font-medium;
+				}
+				&.call-to-action {
+					padding-right: 0;
+					@media screen and (min-width: $xsmall) {
+						padding-right: 1.5em;
+					}
+					@media screen and (min-width: $small) {
+						padding-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+section.get-involved {
+	margin-top: 2em;
+	@media screen and (min-width: $medium) {
+		margin-top: 5.5em;
+		padding-bottom: 1em;
+	}
+	div.row {
+		div {
+			margin-top: 1.875em;
+			margin-bottom: 2em;
+			@media screen and (min-width: $medium) {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			a.image {
+				display: block;
+				width: 100%;
+				position: relative;
+				padding-bottom: 62%; // Height ÷ width of image
+				&:after {
+					content: '';
+					opacity: .15;
+					background-color: $orange;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					@include transition(all 50ms);
+				}
+				&:hover {
+					img {
+						@include transition(all 100ms);
+					}
+					&:after {
+						@include transition(all 50ms);
+						opacity: 0;
+					}
+				}
+				img {
+					width: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					@include border-radius(.25em);
+					@include transition(all 100ms);
+				}
+			}
+			p.description {
+					color: $beige;
+					@media screen and (min-width: $medium) {
+						font-size: $font-xsmall;
+					}
+					@media screen and (min-width: $large) {
+						font-size: $font-small;
+					}
+			}
+			h3 {
+				margin-top: 1.2em;
+				@media screen and (min-width: $medium) {
+					font-size: $font-small;
+				}
+				@media screen and (min-width: $large) {
+					font-size: $font-medium;
+				}
+			}
+			p.link {
+				line-height: 1.1em;
+				font-size: $font-xsmall;
+				margin-top: .75em;
+				a {
+					color: $blue;
+					&:hover {
+						color: $darkblue;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+section.featured-speakers {
+	margin-top: 4em;
+	@media screen and (min-width: $large) {
+		margin-top: 5em;
+	}
+	div.row {
+		div {
+			text-align: center;
+			ul.row {
+				margin-top: 2em;
+				li.columns {
+					padding-right: .5em;
+					margin-bottom: 2em;
+					@media screen and (max-width: $small) { // Notice "max-width"
+						width: 100%;
+					}
+					@media screen and (min-width: $medium) {
+						margin-bottom: 25px;
+					}
+					a {
+						div {
+							width: 100%;
+							overflow: hidden;
+							position: relative;
+							padding-bottom: 63.6363636%;
+							@include transition(all 60ms);
+							@include border-radius(.125em);
+							border:none;
+							-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+							img {
+								width: 100%;
+								position: absolute;
+								top: 50%;
+								left: 0;
+								transform: translateY(-50%);
+							}
+							&:after {
+								content: '';
+								opacity: .15;
+								background-color: $orange;
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								@include transition(all 50ms);
+							}
+						}
+						&:hover {
+							div {
+								@include transition(all 60ms);
+								&:after {
+									@include transition(all 50ms);
+									opacity: 0;
+								}
+							}
+						}
+					}
+					p {
+						margin-top: .65em;
+						font-size: $font-small;
+						letter-spacing: -.0125em;
+						a {
+							text-decoration: none;
+							color: $beige;
+							&:hover {
+								color: $blue;
+							}
+						}
+					}
+					&:hover {
+						p {
+							a {
+								color: $blue;
+								&:hover {
+									color: $darkblue;
+								}
+							}
+						}
+					}
+				}
+			}
+			.call-to-action {
+				margin-top: 1em;
+				@media screen and (min-width: $medium) {
+					margin-top: 2.5em;
+				}
+			}
+		}
+	}
+}

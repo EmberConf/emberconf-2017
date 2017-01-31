@@ -1,0 +1,47 @@
+/* Faqs
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.faqs {
+	h1 {
+		text-align: center;
+		margin-bottom: 1.25em;
+	}
+	dl {
+		dt {
+			font-weight: bold;
+			color: $black;
+			letter-spacing: $tight-tracking;
+			line-height: 1.5em;
+			margin-top: 2em;
+		}
+		dd {
+			p {
+				&:first-child {
+					margin-top: 0;
+				}
+				margin-top: 1em;
+			}
+		}
+	}
+	section.refunds-and-transfers {
+    padding-bottom: 3em;
+    div.row {
+      div.columns {
+        p {
+          margin-top: 1.25em;
+          font-size: $font-small;
+          line-height: 1.5em;
+          a {
+            &.call-to-action {
+              margin-top: .3em;
+              &:after {
+                @media screen and (max-width: $small) { // Max width
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

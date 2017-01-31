@@ -1,0 +1,274 @@
+div.location-and-hotels {
+  section.directions {
+    div.row {
+      div.columns {
+        ul {
+          > * {
+            vertical-align:top;  // Align children to middle of line
+          }
+          li {
+            display: block;
+            width: 100%;
+            @media screen and (min-width: $small-medium) {
+              display: inline-block;
+              width: 50%;
+            }
+            @media screen and (min-width: $medium-large) {
+              width: 33.333333333%;
+            }
+            position: relative;
+            margin: 3.5em 0 0 0;
+            &:last-child {
+              @media screen and (min-width: $small-medium) {
+                display: block;
+                width: 100%;
+              }
+              @media screen and (min-width: $medium-large) {
+                display: inline-block;
+                width: 66.666666667%;
+              }
+            }
+            img {
+                height: 2.5em;
+                width: 2.5em;
+                position: absolute;
+                top: 0;
+                left: 0;
+                @media screen and (min-width: $small-medium) {
+                  position: relative;
+                }
+            }
+            div {
+              padding-left: 3.5em;
+              margin-top: 1em;
+              @media screen and (min-width: $small-medium) {
+                padding-right: 2.5em;
+                padding-left: 0;
+              }
+              h4 {
+                font-size: $font-small;
+              }
+              p {
+                margin-top: .25em;
+                font-size: $font-xsmall;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  section.transportation {
+    div.row {
+      div.columns {
+        ul {
+          padding: 0;
+          li {
+            // width: 100%;
+            position: relative;
+            margin-top: 3.5em;
+
+            img {
+              height: 2.5em;
+              width: 2.5em;
+              position: absolute;
+              top: 0;
+              left: 0;
+              @media screen and (min-width: $small-medium) {
+                position: relative;
+              }
+            }
+            div {
+              padding-left: 3.5em;
+              margin-top: 1em;
+              @media screen and (min-width: $small-medium) {
+                padding-right: 2.5em;
+                padding-left: 0;
+              }
+              h4 {
+                font-size: $font-small;
+              }
+              p {
+                margin-top: .25em;
+                font-size: $font-xsmall;
+
+                strong {
+                  letter-spacing: $tight-tracking;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+  section.hotels {
+    ul.lodging-options {
+      li.lodging-option {
+        &:first-child {
+          margin-bottom: 2.5em;
+          @media screen and (min-width: $medium){
+            margin-bottom: 0;
+          }
+        }
+        > p {
+          &:nth-of-type(1) {
+            margin-top: 0;
+          }
+          &:nth-of-type(2) {
+            margin-top: 1em;
+          }
+          &.fine-print {
+            font-size: $font-xxsmall;
+            padding-right: 10em;
+            margin-top: 2em;
+          }
+          a {
+            &.address {
+              color: $beige;
+              &:hover {
+                color: $blue;
+              }
+            }
+          }
+        }
+        ul {
+          margin-top: 1em;
+          overflow: hidden;
+          li {
+            width: auto;
+            float: left;
+            margin-right: 2.5em;
+            h5 {
+              font-weight: bold;
+              line-height: 1.4em;
+            }
+            p {
+              font-size: $font-medium;
+              letter-spacing: -.01em;
+              margin-top: -.125em;
+              span {
+                letter-spacing: 0;
+                font-size: .25em;
+              }
+            }
+          }
+        }
+      }
+    }
+    img {
+      margin-bottom: 1em;
+      @media screen and (min-width: $medium){
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+}
+
+.map-card {
+  .call-to-action {
+    margin-top: .5em;
+  }
+}
+
+.map-container {
+  position: relative;
+  height: 34.375em;
+  margin-bottom: 4.5em;
+  @media screen and (min-width: $medium) {
+    margin-bottom: 6em;
+  }
+}
+#map {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  cursor: default;
+}
+.gm-style-iw + div {
+  display: none;
+} //Disables "Close" button on Google Maps infoWindow
+.page-intro img {
+  display: none;
+  @media screen and (min-width: $medium){
+    margin-top: -.125em;
+    display: block;
+  }
+}
+
+.hotels .small-button,
+.airlines .small-button {
+  margin-top: .75em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  @media screen and (min-width: $medium){
+    margin-top: 1.5em;
+  }
+}
+.hotels ul,
+.transportation ul {
+  margin-top: 3em;
+}
+.airlines ul {
+  // margin-top: 3em;
+  margin-bottom: 0;
+  @media screen and (min-width: $medium) {
+    // margin-top: 4em;
+    margin-bottom: .5em;
+  }
+
+}
+.airlines ul p {
+  font-size: 1.3125em;
+}
+.airlines ul p.promo-code{
+  font-weight: 700;
+  color: $black;
+}
+.airlines ul p.discount{
+  font-size: 1em;
+}
+.airlines ul p a.small-button {
+  font-size: .571428571em;
+}
+.directions p,
+.transportation p {
+  font-size: $font-small;
+  @media screen and (min-width: $medium){
+    font-size: $font-small;
+  }
+}
+.airline-logo {
+  display: table-cell;
+  height: 4em;
+  vertical-align: middle;
+  opacity: .6;
+  @media screen and (min-width: $large){
+    height: 5em;
+  }
+}
+.airlines li {
+  margin-top: 2em;
+  overflow: hidden;
+  @media screen and (min-width: $medium){
+    margin-top: 3em;
+    width: 50%;
+    float: left;
+  }
+  @media screen and (min-width: $large){
+    width: 33.3333333%;
+    padding: 0 .025em;
+  }
+  &:first-child hr {
+    display: none;
+  }
+}
+.airlines li hr.body-hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  @media screen and (min-width: $medium){
+    display: none;
+  }
+}

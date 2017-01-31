@@ -1,0 +1,7 @@
+header .logo::after,
+header .logo:hover::after {
+  display: none;
+}
+.toggled-content p {
+  opacity: 1;
+}
