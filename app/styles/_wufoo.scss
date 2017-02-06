@@ -1,0 +1,225 @@
+@import url('//fonts.googleapis.com/css?family=Poppins:400,700');
+
+#public {
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+  div#container {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding-bottom: 4em;
+    h1#logo {
+      // width: 142px;
+      // height: 87px;
+      background-color: transparent;
+      display: block;
+      margin: .75em 1% .75em;
+      a {
+        // display: none;
+        cursor: default;
+        background-size: contain;
+      }
+    }
+    form.wufoo {
+      margin: 0;
+      padding: 0;
+      header#header.info {
+        border-bottom: 0;
+        padding-bottom: 2.4em;
+        h2 {
+          font-weight: bold;
+          font-size: $font-large;
+        }
+        div {
+          color: $beige;
+          p {
+            font-size: $font-xsmall;
+            &:first-child {
+              font-size: $font-small;
+              margin-top: 1em;
+            }
+          }
+          font-size: $font-medium;
+          a {
+            color: $blue;
+            &:hover {
+              color: $darkblue;
+            }
+          }
+          strong {
+            color: $black;
+            letter-spacing: $tight-tracking;
+          }
+          small {
+            font-size: $font-xxsmall;
+            display: block;
+            line-height: 1.4em;
+            text-transform: none;
+          }
+        }
+      }
+      ul {
+        &.running {
+          li {
+            section {
+              margin-top: 0;
+              margin-bottom: 0;
+            }
+          }
+        }
+        li {
+          margin-bottom: 1em;
+          width: auto;
+          &:hover {
+            p.instruct {
+              left: 0;
+            }
+          }
+          &.focused {
+            background: none;
+            label {
+              &.choice {
+                font-weight: normal;
+                letter-spacing: 0em;
+                color: $darkbeige;
+              }
+            }
+          }
+          &.buttons {
+            margin-top: 2.5em;
+            div {
+              input[type=submit] {
+                background: $blue;
+                font-size: $font-small;
+                padding: .5em 2em;
+                color: white;
+                border: none;
+                @include border-radius(9999em);
+                cursor: pointer;
+
+              }
+            }
+          }
+          &.waitlist-category {
+            fieldset {
+              legend {
+                background: none;
+                font-weight: bold;
+                color: $black;
+                letter-spacing: $tight-tracking;
+              }
+            }
+          }
+          &.anything-else {
+            section {
+              margin-bottom: 0;
+            }
+          }
+          section {
+            margin-top: 1em;
+            margin-bottom: 1.5em;
+            h3 {
+              font-weight: bold;
+              letter-spacing: $tight-tracking;
+              color: $black;
+              font-size: $font-medium;
+              border: none;
+            }
+            div {
+              color: $beige;
+            }
+          }
+          fieldset {
+            margin: 0 0 0 0;
+            padding: 0;
+            border: none;
+            legend {
+              background: none;
+              color: $beige;
+              font-weight: normal;
+            }
+            div {
+              margin-top: 1em;
+              span {
+                color: $beige;
+                input {
+                  &[type=text]{
+                    border: 1px solid white;
+                    background: white;
+                  }
+                  &.checkbox {
+                    display: inline-block;
+                  }
+                  &[type=radio] {
+                    display: inline-block;
+                  }
+                }
+              }
+            }
+          }
+          label {
+            width: auto;
+            color: $beige;
+            font-weight: normal;
+            letter-spacing: 0em;
+            small {
+              font-size: $font-xsmall;
+              color: $beige;
+              display: block;
+              margin-top: .5em;
+              line-height: 1.5em;
+              margin-bottom: .75em;
+              text-transform: none;
+            }
+          }
+          div {
+            textarea {
+              &.textarea {
+                border: 1px solid white;
+                background: white;
+                margin-bottom: 1em;
+                margin-top: .35em;
+              }
+            }
+            input {
+              &[type=text], &[type=email] {
+                border: 1px solid white;
+                background: white;
+                margin-bottom: 0;
+              }
+              &.checkbox {
+                display: inline-block;
+              }
+              &[type=radio] {
+                display: inline-block;
+              }
+            }
+          }
+          p.instruct {
+            left: 0;
+            opacity: 1;
+            position: relative;
+            visibility: visible;
+            padding: 0;
+            margin: .5em 0 0 0;
+            width: 100%;
+            line-height: 1.3em;
+            font-size: $font-xsmall;
+            background: none;
+            border: none;
+            small {
+              color: $beige;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.application-sent {
+  
+}

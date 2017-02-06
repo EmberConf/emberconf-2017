@@ -1,0 +1,44 @@
+{{#if settings.show_sponsors}}
+  <!-- Once we get 2-3 sponsors -->
+  {{ partial "sponsors-footer" }}
+  {{sponsors-footer packageSponsors=data.sponsors.package_sponsors}}
+{{else}}
+  <!-- Until we get 2-3 sponsors -->
+  {{previous-sponsors previousSponsors=data.previous_sponsors}}
+{{/if}}
+
+
+<!-- Global Footer -->
+
+<footer>
+  <a name="footer"></a>
+  <div class="main-footer">
+    <div class="row">
+      <div class="small-12 columns">
+        <a href="index.html" class="logo"><span class="tomster"></span><img src="images/emberconf-logo.png" alt="Emberconf 2017 Logo"></a>
+        <h3>March 28 &amp; 29 &#8226; Portland, OR.</h3>
+        {{ partial "global-navigation" }}
+      </div>
+    </div>
+  </div>
+  <div class="secondary-footer">
+    <div class="row">
+      <ul class="small-12 columns">
+        <li><a href="//emberwomen.com" target="_blank">Women: Get Involved</a></li>
+        <li><a href="images/EmberConf-2017-Sponsor-Prospectus.pdf">Sponsor Prospectus PDF</a></li>
+        <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="http://2014.emberconf.com" target="_blank">EmberConf 2014</a>, <a href="http://2015.emberconf.com" target="_blank">2015</a>, <a href="http://2016.emberconf.com" target="_blank">2016</a></li>
+      </ul>
+      <div class="small-12 columns">
+        <p>&copy;
+          <script>
+          var year = new Date().getFullYear();
+          document.write(year);
+          </script>
+          <a href="http://www.tilde.io" target="_blank">Tilde Inc.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

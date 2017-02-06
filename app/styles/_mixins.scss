@@ -1,0 +1,81 @@
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+  @-o-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+@mixin bezierEase($p1,$p2,$p3,$p4) {
+-webkit-transition-timing-function: cubic-bezier($p1,$p2,$p3,$p4);
+   -moz-transition-timing-function: cubic-bezier($p1,$p2,$p3,$p4);
+     -o-transition-timing-function: cubic-bezier($p1,$p2,$p3,$p4);
+        transition-timing-function: cubic-bezier($p1,$p2,$p3,$p4);
+}
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+@mixin transform-origin($originpointX, $originpointY) {
+	   -moz-transform-origin: $originpointX $originpointY;
+	     -o-transform-origin: $originpointX $originpointY;
+	    -ms-transform-origin: $originpointX $originpointY;
+	-webkit-transform-origin: $originpointX $originpointY;
+          transform-origin: $originpointX $originpointY;
+}
+@mixin flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin bullets-expanded {
+  li:before {
+    content: "—";
+  }
+  li {
+    list-style: none;
+  }
+  ul {
+    padding-left: 0;
+    margin: 1rem 0;
+  }
+}

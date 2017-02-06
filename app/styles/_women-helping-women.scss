@@ -1,0 +1,65 @@
+/* Women Helping Women
+––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.women-helping-women section.pullquote {
+	background: $black;
+}
+.women-helping-women section.pullquote::before {
+	background-position: top right;
+	@include at2x('../images/lauren-tan-speaking', jpg, cover);
+	opacity: .65;
+	@media screen and (min-width: $medium){
+		opacity: 1;
+	}
+}
+.women-helping-women section.pullquote p ~ blockquote {
+	margin-top: .25em;
+}
+.women-involved ul li {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	padding: 0 .5em;
+	margin-top: 3em;
+	@media screen and (min-width: $small){
+		width: 50%;
+	}
+	@media screen and (min-width: $medium){
+		width: 33%;
+	}
+	@media screen and (min-width: $large) {
+		width: 33%;
+	}
+}
+.women-involved ul li p:last-of-type {
+	line-height: 1.3em;
+}
+.what-were-doing ul {
+	margin-top: 2em;
+}
+.what-were-doing ul li {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	padding: 0 .5em;
+	margin-top: 1.5em;
+	@media screen and (min-width: $medium){
+		width: 50%;
+		margin-top: 2em;
+	}
+	@media screen and (min-width: $large){
+		margin-top: 3em;
+	}
+}
+.what-were-doing ul li:last-child {
+	width: 100%;
+	@media screen and (min-width: $medium){
+		padding-right: 5em;
+	}
+}
+.join-mailing-list form{
+	margin: 1.5em 0 .5em;
+	@media screen and (min-width: $medium){
+		margin: 2em 0 1em;
+	}
+}

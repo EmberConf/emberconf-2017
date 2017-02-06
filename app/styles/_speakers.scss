@@ -1,0 +1,314 @@
+.speakers {
+  section.previous-speakers {
+    h2 {
+      text-align: center;
+    }
+    ul {
+      margin-top: 4em;
+
+      li {
+        text-align: center;
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        margin-bottom: 1.5em;
+        @media screen and (min-width:$small) {
+          width: 33.333333333333%;
+        }
+        @media screen and (min-width:$small-medium) {
+          width: 25%;
+        }
+        @media screen and (min-width:$medium) {
+          width: 20%;
+        }
+        @media screen and (min-width:$medium-large) {
+          width: 16.666666667%;
+        }
+        @media screen and (min-width:$large) {
+          width: 14.285714286%;
+        }
+
+        div {
+          div.photo {
+            width: 70%;
+            margin: 0 auto;
+            position: relative;
+            @include border-radius(1000em);
+            overflow: hidden;
+            background: $orange;
+            @media screen and (min-width:$small-medium) {
+              width: 65%;
+            }
+            @media screen and (min-width:$medium-large) {
+              width: 60%;
+            }
+            img {
+              min-width: 100%;
+              opacity: .9;
+              @include transition(all, 300ms);
+              @include border-radius(1000em);
+
+            }
+
+          }
+
+        }
+
+
+        p {
+          font-size: $font-xxsmall;
+          margin-top: .5em;
+          letter-spacing: $tight-tracking;
+        }
+      }
+    }
+  }
+  section.speaker-photo {
+    figure {
+      display: block;
+      margin-top: -3em;
+      text-align: center;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  section.speaker-list {
+    ul {
+      li {
+        border-top: .0625em solid $hairline;
+        padding: 3em 0 3em;
+        @media screen and (min-width:$medium) {
+          padding: 3em 0 4em;
+        }
+        &:first-child {
+          border-top: none;
+          padding-top: 0;
+          margin-top: -1em;
+          @media screen and (min-width: $medium) {
+            margin-top: 0;
+          }
+        }
+        div.columns {
+          text-align: center;
+          div.photo {
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            margin: 0 auto 0;
+            img {
+              display: block;
+              position: relative;
+              width: 13em;
+              height: 100%;
+              max-width: 100%;
+              margin: 0 auto;
+              opacity: .8;
+              @include border-radius(1000em);
+            }
+            &:before {
+              content: '';
+              display: block;
+              width: 100%;
+              height: 100%;
+              background: $orange;
+              position: absolute;
+              top: 0;
+              right: 0;
+              @include border-radius(1000em);
+            }
+          }
+        }
+        div.speaker-bio {
+          text-align: left;
+          margin-top: 2em;
+          @media screen and (min-width: $medium){
+            margin-top: 0;
+            padding-left: 2em;
+          }
+
+
+          .speaker-tags {
+            margin-top: .5em;
+            .speaker-tag {
+              color: white;
+              font-weight: bold;
+              font-size: $font-xxxsmall;
+              text-transform: uppercase;
+              display: inline-block;
+              background: red;
+              padding: .5em .75em;
+              margin-right: .05em;
+              @include border-radius(.125em);
+              &.keynote-speaker {
+                background: $green;
+              }
+              &.core-member {
+                background: $beige;
+              }
+              &.trainer {
+                background: $pink;
+              }
+              &.bonus {
+                background: $bronze;
+              }
+            }
+          }
+
+          h4 {
+            span.speaker-name {
+              font-size: $font-medium;
+              letter-spacing: $tight-tracking;
+            }
+            & ~ p {
+              margin-top: .75em;
+            }
+            span{
+              &.twitter {
+                position: relative;
+                a {
+                  @include border-radius(9999em);
+                  &:before {
+                    content: '';
+                    position: relative;
+                    display: inline-block;
+                    top: .1em;
+                    height: 1.2em;
+                    width: 1.2em;
+                    background-image: url('../images/icon-twitter@2x.png');
+        						background-size: 100%;
+                    background-repeat: no-repeat;
+                    // @include at2x('../images/icon-twitter', png, 100%);
+                    position: relative;
+                    opacity: .5;
+                    margin: 0 auto;
+
+                  }
+                  &:hover {
+                    color: $black;
+                    &:before {
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .speaker-sessions {
+            .speaker-session-info{
+              margin-top: .125em;
+              &:first-child {
+                margin-top: 1.25em;
+              }
+              .toggle-link {
+                letter-spacing: -.025em;
+                line-height: 1.4em;
+                font-size: $font-xsmall;
+                color: $blue;
+                &:hover {
+                  color: $blue;
+                  span {
+                    color: $blue;
+                  }
+                }
+                span {
+                  font-weight: normal;
+                  color: $blue;
+                }
+              }
+            }
+            .toggled-content {
+              @include bullets-expanded;
+              h3 {
+                font-size: $font-small;
+                color: $black;
+              }
+              br {
+                line-height: 2.5em;
+              }
+              p {
+                &.call-to-action {
+                  margin-top: 0em;
+                  font-size: $font-xsmall;
+                  a {
+                    color: $beige;
+                  }
+                }
+              }
+              ul{
+                margin: 0 0 2em;
+                li {
+                  padding: .3em 0;
+                  border: none;
+                  margin: 0;
+                  line-height: 1.5em;
+                  &:first-child {
+                    padding-top: 0;
+                  }
+                }
+              }
+            }
+          }
+          a.pitch-video {
+            width: 60%;
+            padding-bottom: 32.8125%; // 60% of (8.75÷16)
+            background: $black;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            margin-top: 1em;
+            &:hover {
+              img {
+                opacity: .7;
+                @include transition(all 100ms);
+              }
+            }
+            img {
+              position: absolute;
+              top: -100%;
+              bottom: -100%;
+              left: 0;
+              right: 0;
+              margin: auto;
+              width: 100%;
+              height: auto;
+              @include border-radius(0);
+              @include transition(all 100ms);
+              -webkit-backface-visibility: hidden;
+              opacity: .5;
+            }
+            &:after {
+              content: '';
+              @include at2x('../images/play-icon', png, 100%);
+              display: block;
+              width: 3.6875em;
+              height: 3.6875em;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              margin-left: -1.875em; // Half the image height
+              margin-top: -1.875em; // Half the image height plus a little more to optically center it
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include keyframes (twitterFadeIn) {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  1% {
+    display: block;
+    @include transform(translateY(.5em));
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+    @include transform(translateY(0em));
+  }
+}

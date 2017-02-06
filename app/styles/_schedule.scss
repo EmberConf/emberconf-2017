@@ -1,0 +1,308 @@
+/* Schedule
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.schedule {
+	section.day-nav {
+		margin-bottom: -5.5em;
+		padding-bottom: 0;
+		padding-top: 1.5em;
+		margin-top: .5em;
+		@media screen and (min-width: $medium) {
+			padding-top: 1em;
+		}
+		@media screen and (min-width: $large) {
+			padding-top: .5em;
+		}
+		div {
+			div {
+				div {
+					ul {
+						background: $bg;
+						padding: .75em 0 .4em;
+						text-align: center;
+						li {
+							display: inline-block;
+							margin-right: .35em;
+							@media screen and (min-width: $small) {
+								margin-right: 1em;
+							}
+							&:last-child {
+								margin-right: 0;
+							}
+							a {
+								font-size: $font-small;
+								font-weight: bold;
+								line-height: 1.5em;
+								letter-spacing: $tight-tracking;
+								@media screen and (min-width: $medium) {
+									font-size: $font-medium;
+									line-height: 1.523809524em;
+								}
+								@media screen and (min-width: $large) {
+									font-size: $font-medium;
+									line-height: 1.615384615em;
+								}
+								&.active {
+									color: $black;
+									border-bottom: .125em solid $orange;
+									@media screen and (min-width: $medium) {
+										border-bottom: .142857143em solid $orange;
+									}
+								}
+								&:hover {
+									color: $black;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	section.day {
+		padding-bottom: 0em;
+		&.stuck {
+			padding-top: 3.25em; // offsets the 4em loss created when .fixed leaves the DOM
+			@media screen and (min-width: $large) {
+					padding-top: 3.75em;
+			}
+		}
+		.day-intro {
+			text-align: left;
+			@media screen and (min-width: $medium) {
+				text-align: center;
+			}
+		}
+		ol {
+			margin-top: 2.5em;
+			li {
+
+				h3 {
+					color: $black;
+					& ~ p {
+						margin-top: 0;
+						padding-bottom: 0;
+					}
+				}
+				div.row {
+					display: block;
+					padding: 1em 0 1.25em;
+					overflow: visible;
+					border-top: .0625em solid $hairline;
+					@media screen and (min-width: $medium) {
+						padding: 1.75em 0 2em;
+					}
+					&:hover {
+							background: #E9E6E6;
+							cursor: pointer;
+					}
+					.event-time {
+						text-align: left;
+						@media screen and (min-width: $medium){
+							text-align: right;
+						}
+						p {
+							font-size: .75em;
+							margin-bottom: .25em;
+							letter-spacing: -.035em;
+							color: $darkbeige;
+							@media screen and (min-width: $medium){
+								font-size: 1em;
+								margin-bottom: 0;
+							}
+							@media screen and (min-width: $large){
+								line-height: 1.6em;
+							}
+							span.end-time {
+								opacity: .4;
+								@media screen and (min-width: $medium){
+									display: block;
+								}
+								&:before {
+									content: '\2013'; // En-dash, bwoy!
+									@media screen and (min-width: $medium){
+										content: '';
+									}
+								}
+							}
+						}
+					}
+					h3 {
+						&.schedule-chunk {
+							text-transform: uppercase;
+							color: $pink;
+							font-weight: bold;
+							font-size: $font-small; //16px
+							letter-spacing: $tight-tracking;
+						}
+					}
+					div.event-info {
+						span {
+							&.addon, &.sold-out {
+								font-size: $font-xxsmall;
+								font-weight: bold;
+								letter-spacing: $tight-tracking;
+								line-height: 1.7em;
+							}
+							&.addon {
+								color: $green;
+							}
+							&.sold-out {
+								color: $black;
+								.waitlist {
+									color: $beige;
+									&:before {
+										content: ' - ';
+									}
+								}
+							}
+						}
+						img:not(.specified-width) {
+							display: block;
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							float: right;
+							opacity: .8;
+						}
+						.img {
+							display: block;
+							position: relative;
+							width: 1.875em;
+							height: 1.875em;
+							float: right;
+							content: '';
+							margin-top: -.25em;
+							margin-left: 1em;
+							background-color: $orange;
+							border: 2px solid $bg;
+							@include border-radius(1000em);
+							@media screen and (min-width: $small){
+								width: 2.5em;
+								height: 2.5em;
+							}
+							@media screen and (min-width: $medium){
+								width: 3.125em;
+								height: 3.125em;
+								margin-left: 2em;
+							}
+							@media screen and (min-width: $large){
+								width: 4em;
+								height: 4em;
+								margin-left: 3em;
+							}
+						}
+						.img2 {
+							display: block;
+							position: relative;
+							width: 1.875em;
+							height: 1.875em;
+							float: right;
+							content: '';
+							margin-top: -.25em;
+							margin-left: -.25em;
+							background-color: $orange;
+							@include border-radius(1000em);
+							@media screen and (min-width: $small){
+								width: 2.5em;
+								height: 2.5em;
+								margin-left: -.5em;
+							}
+							@media screen and (min-width: $medium){
+								width: 3.125em;
+								height: 3.125em;
+								margin-left: -.75em;
+							}
+							@media screen and (min-width: $large){
+								width: 4em;
+								height: 4em;
+								margin-left: -1em;
+							}
+						}
+						p {
+							a {
+								color: $beige;
+								&:hover {
+									color: $black;
+								}
+							}
+						}
+						div.accordion-content {
+							@include bullets-expanded;
+							display: none;
+							color: $beige;
+							p {
+								@media screen and (min-width: $medium){
+									padding-right: 3.125em;
+								}
+								@media screen and (min-width: $large){
+									padding-right: 4.375em;
+								}
+								&.waitlist-notification {
+									background: $darkhairline;
+									padding: .25em .5em;
+								}
+								a {
+									color: $blue;
+									&:hover {
+										color: $darkblue;
+									}
+								}
+							}
+							ul {
+								li {
+									line-height: 1.5em;
+								}
+								li:before {
+									content: "—";
+								}
+							}
+							a {
+								&.button {
+									margin-top: 1.5em;
+								}
+							}
+						}
+					}
+				}
+				&.expanded {
+					div.row {
+						div.event-info {
+							div.accordion-content {
+								display: block;
+								opacity: 1;
+								margin-top: 1em;
+								margin-bottom: 1em;
+								@include animation(expandAccordion 500ms forwards);
+								&:hover {
+									cursor: auto;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.fixed {
+	position: fixed;
+	display: block;
+	left: 0;
+	width: 100%;
+	top: 0;
+	z-index: 1000;
+	height: 3.75em;
+	background: $bg;
+	@include box-shadow(0px, 1px, 5px, rgba(0,0,0,.1));
+}
+.schedule a.anchor {
+	display: block;
+	content: '';
+	height: 6em;
+	position: relative;
+	top: 6em;
+}

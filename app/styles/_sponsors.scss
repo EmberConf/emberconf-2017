@@ -1,0 +1,141 @@
+/* Sponsors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.xsponsor-list > li {
+	margin-bottom: 6em;
+}
+.xsponsor-list h3 {
+	margin-bottom: .3em;
+	font-weight: normal;
+	color: $beige;
+	text-transform: uppercase;
+	font-size: $font-medium;
+	letter-spacing: 0;
+}
+.our-xsponsors .xsponsor {
+	overflow: hidden;
+	border-top: 1px solid $hairline;
+	padding: 1.5em 0;
+	margin-top: 1em;
+	@media screen and (min-width: $medium) {
+		padding: 2.25em 0;
+	}
+}
+.our-xsponsors .xsponsor .logo,
+.other-xsponsor .logo {
+	padding-right: 2.5em;
+	@media screen and (min-width: $medium) {
+		padding-right: 3.25em;
+	}
+}
+h4.other-xsponsor-category {
+	font-weight: 400;
+	font-size: 1em;
+	color: $beige;
+}
+.our-xsponsors .xsponsor img,
+.other-xsponsor .logo img {
+	max-height: 5em;
+	margin-bottom: 1.25em;
+	margin-top: 1em;
+	@media screen and (min-width: $medium) {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+}
+.our-xsponsors {
+	.current-xsponsors {
+		padding-bottom: 0;
+		margin-top: 4em;
+	}
+}
+.other-xsponsor {
+	overflow: hidden;
+	margin-bottom: 2.25em;
+	border-top: 1px dotted $hairline;
+	padding-top: 2.25em;
+	&:first-child {
+		padding-top: .5em;
+		border: none;
+	}
+}
+
+.our-xsponsors {
+	.xsponsors-footer {
+		display: none;
+	}
+	.previous-xsponsors {
+		display: none;
+	}
+	.page-intro {
+		.row {
+			padding-left: 0;
+			padding-right: 0;
+			@media screen and (min-width: $large) {
+				padding-left: .5em;
+				padding-right: .5em;
+			}
+			div.large-8 {
+				padding-left: 1.4375em;
+				padding-right: 1.4375em;
+				@media screen and (min-width: $large) {
+					padding-left: .9375em;
+					padding-right: .9375em;
+				}
+			}
+			div.large-4 {
+				padding: 0;
+				@media screen and (min-width: $large) {
+					padding-left: .9375em;
+					padding-right: .9375em;
+				}
+			}
+			.become-a-xsponsor-callout {
+				margin-top: 1.75em;
+				background-color: $darkerbg;
+				padding: 1.2em 1.5em 1em;
+				position: relative;
+				// padding: 0 0 0 2em;
+				@media screen and (min-width: $medium) {
+					// padding: 2.5em 1.5em 3em;
+				}
+				@media screen and (min-width: $large) {
+					// padding: 1.5em;
+					margin-top: -1em;
+					@include border-radius(.4em);
+				}
+				h3 {
+
+					// &:before {
+					// 	content: '';
+					// 	display: block;
+					// 	height: .714285714em;
+					// 	width: .714285714em;
+					// 	@include at2x('../images/star-icon', png, 100%);
+					// 	margin-left: -.714285714em;
+					// 	left: -.476190476em;
+					// 	top: .1em;
+					// 	position: relative;
+					// 	float: left;
+					// 	// background: red;
+					// }
+					& + p {
+						font-size: 1em;
+						@media screen and (min-width: $medium) {
+							margin-bottom: .5em;
+							margin-top: .15em;
+						}
+						@media screen and (min-width: $large) {
+							margin-bottom: -.25em;
+						}
+					}
+				}
+				p {
+					&.call-to-action {
+						margin-top: .75em;
+						margin-bottom: .75em;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,37 @@
+/* Code of Conduct
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.code-of-conduct {
+	h1 {
+		text-align: center;
+		margin-bottom: 1.25em;
+	}
+	.xsponsors-footer {
+		display: none;
+	}
+	.previous-xsponsors {
+		display: none;
+	}
+	.page-intro {
+		padding-bottom: 6em;
+		p {
+			margin-bottom: 1.5em;
+			&:nth-of-type(1) {
+				margin-top: 1em;
+			}
+		}
+		small {
+			display: block;
+			font-size: $font-small;
+			line-height: 1.7em;
+			margin-bottom: 2em;
+			&.adaptation-notice {
+				margin-top: 2em;
+				font-size: $font-xxsmall;
+				opacity: .6;
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
