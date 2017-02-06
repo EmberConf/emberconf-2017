@@ -1,0 +1,12 @@
+<nav>
+  {{#link-to 'about' id="nav-about"}}About{{/link-to}}
+  {{#link-to 'speakers' id="nav-speakers"}}Speakers{{/link-to}}
+  {{#link-to 'schedule' id="nav-schedule"}}Schedule{{/link-to}}
+  {{#link-to 'location-and-hotels' id="nav-location-and-hotels"}}Location & Hotels{{/link-to}}
+  {{#if settings.show_sponsors}}
+    {{#link-to 'sponsors'}}Sponsors{{/link-to}}
+  {{else}}
+    {{#link-to 'become-a-sponsor' id="nav-become-a-xsponsor"}}Become a Sponsor{{/link-to}}
+  {{/if}}
+  {{#link-to 'register' class="round small-button"}}Become a Sponsor{{/link-to}}
+</nav>
