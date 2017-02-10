@@ -1,10 +1,10 @@
 {{#if settings.show_sponsors}}
   <!-- Once we get 2-3 sponsors -->
-  {{ partial "sponsors-footer" }}
-  {{sponsors-footer packageSponsors=data.sponsors.package_sponsors}}
+  {{!--{{ partial "sponsors-footer" }}--}}
+  {{!--{{sponsors-footer packageSponsors=data.sponsors.package_sponsors}}--}}
 {{else}}
   <!-- Until we get 2-3 sponsors -->
-  {{previous-sponsors previousSponsors=data.previous_sponsors}}
+  {{!--{{previous-sponsors previousSponsors=data.previous_sponsors}}--}}
 {{/if}}
 
 
@@ -32,10 +32,10 @@
       </ul>
       <div class="small-12 columns">
         <p>&copy;
-          <script>
+          {{!--<script>
           var year = new Date().getFullYear();
           document.write(year);
-          </script>
+          </script>--}}
           <a href="http://www.tilde.io" target="_blank">Tilde Inc.</a>
         </p>
       </div>

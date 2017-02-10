@@ -65,7 +65,7 @@
   </div>
 </section> -->
 
-{{ if settings.show_speakers }}
+{{#if settings.show_speakers }}
   <!-- Featured speakers -->
 
   <section class="featured-speakers">
@@ -90,10 +90,10 @@
       </div>
     </div>
   </section>
-{{ end }}
+{{/if}}
 
 
-{{ if settings.show_schedule }}
+{{#if settings.show_schedule }}
   <!-- Bonus day callout for when schedule launches -->
 
   <section class="bonus-day">
@@ -108,7 +108,7 @@
       </div>
     </div>
   </section>
-{{ end }}
+{{/if}}
 
 
 <!-- Other callouts -->
@@ -127,5 +127,5 @@
 </section>
 
 
-{{ partial "footer" }}
+{{partial "footer" }}
 </div>
