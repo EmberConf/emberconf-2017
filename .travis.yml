@@ -5,6 +5,12 @@ node_js:
 
 sudo: false
 
+branches:
+  only:
+    - staging
+    - trying
+    - master
+
 cache:
   directories:
     - $HOME/.npm
