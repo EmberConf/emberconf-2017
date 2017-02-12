@@ -7,6 +7,13 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('about');
+  this.route('speakers');
+  this.route('schedule');
+  this.route('location-and-hotels');
+  this.route('sponsors');
+  this.route('register');
+  this.route('become-a-sponsor');
 });
 
 export default Router;
