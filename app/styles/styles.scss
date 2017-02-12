@@ -496,32 +496,32 @@ header {
 
 // Active States
 
-.speakers  #nav-speakers,
-.schedule  #nav-schedule,
-.about  #nav-about,
-.location-and-hotels  #nav-location-and-hotels,
-.our-xsponsors  #nav-xsponsors,
-.become-a-xsponsor   #nav-become-a-xsponsor {
+.speakers  .nav-speakers,
+.schedule  .nav-schedule,
+.about  .nav-about,
+.location-and-hotels  .nav-location-and-hotels,
+.our-xsponsors  .nav-xsponsors,
+.become-a-xsponsor   .nav-become-a-xsponsor {
 	font-weight: 700;
 	letter-spacing: $tight-tracking;
 }
 
-.speakers header #nav-speakers,
-.schedule header #nav-schedule,
-.about header #nav-about,
-.location-and-hotels header #nav-location-and-hotels,
-.our-xsponsors header #nav-xsponsors,
-.become-a-xsponsor  header #nav-become-a-xsponsor {
+.speakers header .nav-speakers,
+.schedule header .nav-schedule,
+.about header .nav-about,
+.location-and-hotels header .nav-location-and-hotels,
+.our-xsponsors header .nav-xsponsors,
+.become-a-xsponsor  header .nav-become-a-xsponsor {
 	color: $black;
 	font-weight: 700;
 	letter-spacing: $tight-tracking;
 }
-.speakers footer #nav-speakers,
-.schedule  footer #nav-schedule,
-.about footer #nav-about,
-.location-and-hotels footer #nav-location-and-hotels,
-.our-xsponsors footer #nav-xsponsors,
-.become-a-xsponsor footer #nav-become-a-xsponsor {
+.speakers footer .nav-speakers,
+.schedule  footer .nav-schedule,
+.about footer .nav-about,
+.location-and-hotels footer .nav-location-and-hotels,
+.our-xsponsors footer .nav-xsponsors,
+.become-a-xsponsor footer .nav-become-a-xsponsor {
 	color: $beige;
 	font-weight: 400;
 	letter-spacing: 0;
