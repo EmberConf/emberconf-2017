@@ -1,0 +1,110 @@
+<div class="about">
+  {{partial "header"}}
+  <section class="page-intro">
+    <div class="row">
+      <div class="small-12 columns">
+        <h1>About EmberConf.</h1>
+        <p>Ember is growing every day, and EmberConf is the best place to meet the folks behind the magic. You’ll hear from members of the Ember Core Team, top community contributors and users, and be the first to know what to expect for the future of Ember.</p>
+      </div>
+    </div>
+  </section>
+  <section class="what-to-expect">
+    <div class="row">
+      <div class="small-12 columns">
+        <h3>What to expect:</h3>
+      </div>
+    </div>
+    <div class="row">
+      <ul class="small-12 columns">
+        <li class="expect-talks">
+          Two days of top conference talks
+        </li><li class="expect-lunch">
+          Lunch and snacks on session days
+        </li><li class="expect-friends">
+          Friendly atteendees and speakers
+          </li>
+          <li class="expect-swag">
+            Conference swag and sponsor booths
+          </li><li class="expect-activities">
+            One day of trainings and activities
+          </li><li class="expect-parties">
+            After-hours fun and community building
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="full-bleed pullquote">
+      <div class="row">
+        <div class="small-12 columns">
+          <blockquote>
+            <p class="hanging">&ldquo;One of the best conferences I’ve ever attended. It was like one big family finally united.&rdquo;</p>
+            <h4><cite><a href="https://twitter.com/kaspertidemann/status/449044965855723520" target="_blank" class="tweet">@KasperTidemann</a></cite></h4>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    <a id="meet-leah"></a>
+    <section class="meet-leah">
+      <div class="row">
+        <div class="bio-card small-12 medium-4 large-3 large-offset-1 columns centered">
+          <div class="img">
+            <img src="images/staff/leah-silber.jpg" alt="Leah Silber" class="round">
+          </div>
+            <p>Leah Silber</p>
+            <p class="twitter">
+              <a href="https://twitter.com/wifelette" target="_blank" title="Visit Leah Silber on Twitter">wifelette</a>
+            </p>
+        </div>
+        <div class="about-leah small-12 medium-8 large-7 columns end">
+          <h2>This is Leah. She organizes EmberConf.</h2>
+          <p>Leah is an all-around open source advocate. During the daytime, she’s one of the founders at <a href="http://tilde.io" target="_blank">Tilde Inc</a>, the open-source-centric company behind <a href="http://skylight.io" target="_blank">Skylight</a>. In her spare time, in addition to running EmberConf, Leah works on RailsConf, RustConf and a number of User Groups.</p>
+        </div>
+      </div>
+    </section>
+    <section class="staff">
+      <div class="row">
+        <div class="small-12 columns">
+          <h2>And here’s her support team:</h2>
+        </div>
+      </div>
+      <div class="row">
+        <ul class="small-12 columns">
+          {{!--# Keep the spacing as is for `inline-block` elements %>--}}
+          {{#each data.team.volunteers.each as |member| }}
+          <li class="bio-card">
+            <div class="img">
+              <img alt="<%= member.name %>" src="/images/staff/<%= member.image %>" class="round" data-no-retina>
+            </div>
+            <p>{{member.name}}</p>
+            <p class="twitter">
+              <a href="https://twitter.com/<%= member.twitter %>" target="_blank" title="Visit <%= member.name %> on Twitter">{{member.twitter}}</a>
+            </p>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+    <a name="code-of-conduct"></a>
+    <section class="code-of-conduct">
+      <div class="row">
+        <hr class="body-hr">
+        <div class="small-12 columns">
+          <div>
+            <h2>Our code of conduct is simple:</h2>
+            <h2>We don't tolerate harassment.</h2>
+            <p class="call-to-action"><a href="code-of-conduct.html">Read the full code of conduct</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq-callout">
+      <div class="row">
+        <div class="small-12 medium-12 columns">
+          <div class="hairline-top">
+            <p class="call-to-action">Have questions about the conference? <a href="faqs.html">See our FAQs</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </div>
