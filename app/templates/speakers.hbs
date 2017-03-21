@@ -1,1 +1,114 @@
-{{outlet}}
+<div class="speakers">
+  {{partial "header"}}
+  <section class="page-intro">
+    <div class="row">
+      <div class="small-12 columns">
+        <h1 class="centered">Who's speaking at EmberConf?</h1>
+      </div>
+    </div>
+  </section>
+  <section class="speaker-list">
+    <div class="row">
+      <ul class="small-12 columns">
+        {{#each data.speakers as |speaker| }}
+        <li class="speaker" id="<%= speaker.anchor %>">
+          <div class="row collapse">
+            <div class="small-12 medium-4 columns">
+              <div class="photo">
+                <img src="images/speakers/<%= speaker.image %>" alt="<%= speaker.name %>" data-no-retina>
+              </div>
+
+            </div>
+            <div class="speaker-bio small-12 medium-8 columns end">
+              <h4>
+                <span class="speaker-name">{{speaker.name}}</span>
+                  {{#if speaker.twitter.present}}
+                    <span class="twitter"><a href="https://twitter.com/<%= speaker.twitter %>" title="Visit <%= speaker.name %> on Twitter" target="_blank"></a></span>
+                  {{/if}}
+              </h4>
+              {{#if speaker.core_member or speaker.keynote_speaker or speaker.trainer or speaker.bonus present}}
+              <div class="speaker-tags">
+                {{#if speaker.keynote_speaker }}
+                <div class="speaker-tag keynote-speaker">
+                  Keynote
+                </div>
+                {{/if}}
+                {{#if speaker.core_member}}
+                <div class="speaker-tag core-member">
+                  Core
+                </div>
+                {{/if}}
+                {{#if  speaker.trainer }}
+                <div class="speaker-tag trainer">
+                  Trainer
+                </div>
+                {{/if}}
+                {{#if speaker.bonus }}
+                <div class="speaker-tag bonus">
+                  BonusConf
+                </div>
+                {{/if}}
+              </div>
+
+              {{/if}}
+
+              <p>{{speaker.bio}}</p>
+
+              {{#if speaker.pitch_video_id present }}
+              <a href="https://www.youtube.com/watch?v=<%= speaker.pitch_video_id %>" class="pitch-video" title="Watch <%= speaker.name %>'s pitch video">
+                <img src="http://i.ytimg.com/vi/<%= speaker.pitch_video_id %>/hqdefault.jpg" alt="Watch <%= speaker.name %>'s pitch video">
+              </a>
+              {{/if}}
+
+              <div class="speaker-sessions">
+                {{#each data.schedule as |daily_schedule| }}
+                {{#each daily_schedule.items as |item| }}
+                {{#if (has-speaker-info speaker item) }}
+                <div class="speaker-session-info">
+                  <p>
+                    <a class="toggle-link">
+                      {{item.session_type}}:
+                      <span>{{item.name}}</span>
+                    </a>
+                  </p>
+                  <div class="toggled-content">
+                    <h3>{{item.name}}</h3>
+                    <p class="call-to-action"><a href="schedule.html#{{item.name.parameterize}}">{{item.start}}-{{item.end}}</a></p>
+                    <p>{{item.description}}</p>
+                  </div>
+                </div>
+                {{/if}}
+                {{/each}}
+                {{/each}}
+              </div>
+            </div>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+
+  </section>
+
+  {{partial "footer"}}
+
+  {{!--<script>
+  $('.toggle-link').click( function() {
+    $(this).parent('p').next('div').toggleClass("open");
+    $(this).toggleClass("open");
+  } );
+  </script>
+  <script>
+  $(document).ready(function() {
+    $('.pitch-video').magnificPopup({
+      disableOn: 700,
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false
+    });
+  });
+  </script>
+  <script src="javascripts/magnificent-popup.js"></script>--}}
+</div>
